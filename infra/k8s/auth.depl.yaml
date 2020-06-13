@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: liangfuski/auth:latest
+          image: us.gcr.io/ticketing-dev-280013/auth
 ---
 # ClusterIP service
 apiVersion: v1
