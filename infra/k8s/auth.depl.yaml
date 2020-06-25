@@ -15,6 +15,12 @@ spec:
       containers:
         - name: auth
           image: us.gcr.io/ticketing-dev-280013/auth
+          env:
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
 ---
 # ClusterIP service
 apiVersion: v1
